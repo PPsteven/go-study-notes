@@ -5,6 +5,9 @@ import (
 	"testing"
 )
 
+// how to use json struct tag
+// 1. omitemtpy
+// 2. "-" disable output
 type BirdOmiteEmpty struct {
 	Species     string `json:"birdType"`
 	// we can set the "omitempty" property as part of the JSON tag

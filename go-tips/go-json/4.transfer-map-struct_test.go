@@ -6,6 +6,9 @@ import (
 	"testing"
 )
 
+// 1. map to struct: mapstructure
+// 2. struct to map: reflect
+
 func TestMap2Struct(t *testing.T) {
 	var bird Bird
 	birdMap := map[string]interface{}{

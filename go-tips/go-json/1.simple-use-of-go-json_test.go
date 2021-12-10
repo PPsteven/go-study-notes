@@ -8,6 +8,10 @@ import (
 	"testing"
 )
 
+//1. struct to string
+//2. string to string
+//3. load json from file
+
 type User struct {
 	FirstName string `json:"first_name"` // key will be "first_name"
 	BirthYear int `json:"birth_year"` // key will be "birth_year"
