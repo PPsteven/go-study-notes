@@ -1,3 +1,0 @@
-package go_reflect
-
-
