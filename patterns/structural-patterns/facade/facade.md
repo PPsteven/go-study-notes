@@ -1,0 +1,2 @@
+- Having a facade is handy when you need to integrate your app with a sophisticated library that has dozens of features, but you just need a tiny bit of its functionality.
+- simplify a complex system
