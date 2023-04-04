@@ -9,6 +9,9 @@ import (
 	"sync"
 )
 
+// Store is Product, all kind of Product do the same thing
+// redis, mysql both have Open() method
+// car, plane both have Transport() method
 type Store interface {
 	Open(string) (io.ReadWriteCloser, error)
 }
@@ -33,6 +36,7 @@ func NewStore(t StorageType) (Store, error) {
 
 var memoryStore map[string]string
 
+// MemoryStore is Concrete Product A
 type MemoryStore struct {
 	buf  *bytes.Buffer
 	name string
@@ -67,10 +71,12 @@ func (m *MemoryStore) Close() error {
 	return nil
 }
 
+// Concrete Creator
 func newMemoryStorage() *MemoryStore{
 	return &MemoryStore{}
 }
 
+// DiskStore is Concrete Product B
 type DiskStore struct {}
 
 func (d *DiskStore) Open(name string) (io.ReadWriteCloser, error) {
@@ -81,6 +87,7 @@ func (d *DiskStore) Open(name string) (io.ReadWriteCloser, error) {
 	return file, nil
 }
 
+// Concrete Creator
 func newDiskStorage() *DiskStore {
 	return &DiskStore{}
 }
