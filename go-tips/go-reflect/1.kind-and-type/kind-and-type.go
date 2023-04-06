@@ -77,7 +77,7 @@ func KindAndType() {
 	// By Name
 	field, _ = typeOfBook.FieldByName("Author")
 	fmt.Printf("Name[Author] -> StructField: %v\n", field)
-	// Name[Author] -> StructField: {Author  string  24 [1] false}FieldByIndex([]int)
+	// Name[Author] -> StructField: {Author  string  24 [1] false}
 
 	// By NameFunc
 	field, _ = typeOfBook.FieldByNameFunc(func(s string) bool {
